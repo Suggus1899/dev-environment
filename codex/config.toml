@@ -1,0 +1,176 @@
+notify = [ "C:\\Users\\PC\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2c6075088d3180ec\\bin\\node_modules\\@oai\\sky\\bin\\windows\\codex-computer-use.exe", "turn-ended" ]
+sandbox_mode = "workspace-write"
+model_verbosity = "medium"
+
+[desktop]
+followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = true
+external-agent-import-sync-item-types = "all"
+external-agent-import-sync-enabled = true
+appearanceLightCodeThemeId = "raycast"
+appearanceTheme = "dark"
+appearanceDarkCodeThemeId = "ayu"
+usePointerCursors = true
+reduced-motion-preference = "on"
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra", "persistent", "max"]
+
+[desktop.appearanceLightChromeTheme]
+accent = "#ff6363"
+accentSource = "custom"
+contrast = 45
+ink = "#030303"
+opaqueWindows = false
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+code = '"Jetbrains Mono"'
+ui = "Inter"
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#006b4f"
+diffRemoved = "#b12424"
+skill = "#9a1b6e"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#e6b450"
+accentSource = "custom"
+contrast = 60
+ink = "#bfbdb6"
+opaqueWindows = false
+surface = "#10141c"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#70bf56"
+diffRemoved = "#f26d78"
+skill = "#d0a1ff"
+
+[marketplaces.openai-bundled]
+source_type = "local"
+source = "\\\\?\\C:\\Users\\PC\\.codex\\.tmp\\bundled-marketplaces\\openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+source_type = "local"
+source = "\\\\?\\C:\\Users\\PC\\.cache\\codex-runtimes\\codex-primary-runtime\\plugins\\openai-primary-runtime"
+
+[marketplaces.ecc]
+source_type = "git"
+source = "https://github.com/affaan-m/ECC.git"
+
+[marketplaces.ponytail]
+source_type = "git"
+source = "https://github.com/DietrichGebert/ponytail.git"
+
+[marketplaces.claude-cowork]
+source_type = "local"
+source = '\\?\C:\Users\PC\.codex\plugins\cache\claude-cowork'
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."ecc@ecc"]
+enabled = true
+
+[plugins."ponytail@ponytail"]
+enabled = true
+
+[plugins."anthropic-skills@claude-cowork"]
+enabled = true
+
+[plugins."cowork-plugin-management@claude-cowork"]
+enabled = true
+
+[plugins."data@claude-cowork"]
+enabled = true
+
+[plugins."design@claude-cowork"]
+enabled = true
+
+[plugins."engineering@claude-cowork"]
+enabled = true
+
+[plugins."pdf-viewer@claude-cowork"]
+enabled = true
+
+[plugins."productivity@claude-cowork"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[mcp_servers.node_repl]
+args = []
+command = "C:\\Users\\PC\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2c6075088d3180ec\\bin\\node_repl.exe"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "C:\\Users\\PC\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2c6075088d3180ec\\bin\\node_modules"
+NODE_REPL_NODE_PATH = "C:\\Users\\PC\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2c6075088d3180ec\\bin\\node.exe"
+NODE_REPL_TRUSTED_CODE_PATHS = "C:\\Users\\PC\\.codex;C:\\Users\\PC\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2c6075088d3180ec\\bin\\node_modules"
+CODEX_HOME = "C:\\Users\\PC\\.codex"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_TINYSKY_ENABLED = "0"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.831.21537"
+NODE_REPL_TRUSTED_SERVICES = "{\"browser\":\"C:/Users/PC/.codex/plugins/cache/openai-bundled/browser/26.831.21537/scripts/browser-service.mjs\",\"sky\":\"@oai/sky/service\"}"
+SKY_CUA_NATIVE_PIPE = "1"
+SKY_CUA_NATIVE_PIPE_DIRECTORY = "\\\\.\\pipe\\codex-computer-use-c0c7f1ce-828f-443a-8dae-5e6f567e3596"
+CODEX_CLI_PATH = "C:\\Users\\PC\\AppData\\Local\\OpenAI\\Codex\\bin\\87e5fb3433dabab1\\codex.exe"
+
+[mcp_servers.cua_repl]
+command = "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.831.2377.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+enabled = false
+
+[mcp_servers.gitnexus]
+command = "F:\\Proyectos\\.caches\\npm\\_npx\\5e786f48223a616c\\node_modules\\.bin\\gitnexus.cmd"
+args = [ "mcp" ]
+
+[windows]
+sandbox = "elevated"
+
+[sandbox_workspace_write]
+network_access = true
+
+[features]
+memories = true
+
+[memories]
+generate_memories = true
+use_memories = true
+
+[hooks.state]
+
+[hooks.state.'C:\Users\PC\.codex\hooks.json:pre_tool_use:0:0']
+trusted_hash = "sha256:52756c5c212cf597745145653d191f9302c5737f58debc4c0b6472ced4d0f891"
+
+[hooks.state.'C:\Users\PC\.codex\hooks.json:post_tool_use:0:0']
+trusted_hash = "sha256:7dfe1536e25b8b193adcc2d76e1340fd016fdfcb1cfe8bb5eaec036ade302f15"

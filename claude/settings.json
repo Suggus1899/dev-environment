@@ -1,0 +1,146 @@
+{
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash(pnpm *)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add *)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git pull*)",
+      "Bash(git checkout*)",
+      "Bash(git branch*)",
+      "Bash(flutter analyze *)",
+      "mcp__Claude_Browser__preview_logs",
+      "mcp__Claude_Browser__read_page",
+      "mcp__Claude_Browser__get_page_text",
+      "mcp__Claude_Browser__read_console_messages",
+      "mcp__Claude_Browser__read_network_requests",
+      "mcp__Claude_Browser__preview_list",
+      "mcp__Claude_Browser__find",
+      "mcp__Claude_Browser__tabs_context",
+      "mcp__visualize__read_me"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f*)"
+    ],
+    "defaultMode": "auto"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Grep|Glob|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/PC/.claude/hooks/gitnexus/gitnexus-hook.cjs\"",
+            "timeout": 10,
+            "statusMessage": "Enriching with GitNexus graph context..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/PC/.claude/hooks/gitnexus/gitnexus-hook.cjs\"",
+            "timeout": 10,
+            "statusMessage": "Checking GitNexus index freshness..."
+          }
+        ]
+      }
+    ]
+  },
+  "defaultShell": "powershell",
+  "statusLine": {
+    "type": "command",
+    "command": "git branch --show-current 2>/dev/null",
+    "refreshInterval": 5
+  },
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "serena@claude-plugins-official": false,
+    "everything-claude-code@everything-claude-code": false,
+    "github@claude-plugins-official": false,
+    "ecc@ecc": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "everything-claude-code": {
+      "source": {
+        "source": "github",
+        "repo": "worldflowai/everything-claude-code"
+      }
+    },
+    "ecc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/affaan-m/ECC.git"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "pluginConfigs": {
+    "ecc@ecc": {
+      "options": {
+        "hooks_enabled": true,
+        "hook_profile": "minimal"
+      }
+    }
+  },
+  "theme": "dark",
+  "autoCompactEnabled": true,
+  "precomputeCompactionEnabled": true,
+  "fileCheckpointingEnabled": true,
+  "agentPushNotifEnabled": true,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: assume private unless the remote host and repo name indicate otherwise, or a visibility check in the transcript shows public (repo has no remotes configured — cannot verify hosting or visibility)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: unknown — origin/HEAD unset, no remotes configured",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: The trusted repo only (no remotes configured, no additional orgs configured)",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar — note apps/api/.env.example present, suggesting real .env files (gitignored) hold API secrets",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited — e.g. matches `prod-db`, not `producer`)",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "**Repository visibility**: private (github.com/Suggus1899/Souvenirs)",
+      "**Default / protected branches**: unknown — origin/HEAD unset; no rulesets or protected branches listed via gh",
+      "**Source control**: The trusted repo (github.com/Suggus1899/Souvenirs) and its origin remote only (no additional orgs configured)",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar — apps/api/.env, apps/mobile/.env, apps/web/.env.local (and other .env variants, gitignored) likely hold API/Stripe/DB secrets",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar — apps/api/.env, apps/api/.env.example, apps/mobile/.env, apps/mobile/.env.example, apps/web/.env.example, apps/web/.env.local likely hold API/Stripe/DB secrets (gitignored except .env.example)",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development",
+      "**Trusted repo**: The git repository at F:\\Proyectos\\Souvenirs (its working directory) — no remotes configured, so no remote scoping applies; repo is untracked/empty (0 tracked files)",
+      "**Org-specific CLIs**: None configured",
+      "routine under F:\\Proyectos\\Souvenirs\\ prefix: standard dev commands (npm/npx, docker, docker-compose, git, go, flutter) consistent with shell-history usage patterns, scoped to this project directory",
+      "**Primary use of Claude Code**: software development (NestJS/Prisma/PostgreSQL backend, Next.js web, Expo mobile monorepo)",
+      "**Trusted repo**: The git repository at F:\\Proyectos\\Souvenirs (its working directory) and its origin remote https://github.com/Suggus1899/Souvenirs.git — private repo, so confidential material is fine to commit there but secrets/credentials are never cleared by visibility",
+      "routine under F:\\Proyectos\\Souvenirs\\ prefix: standard dev commands (pnpm, npm, npx, git, docker, docker-compose, node, psql) consistent with shell-history usage patterns, scoped to this project directory"
+    ]
+  },
+  "skillOverrides": {
+    "find-skills": "off"
+  }
+}
