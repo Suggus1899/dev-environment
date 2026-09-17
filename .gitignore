@@ -35,3 +35,10 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+# Local environment files
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.sample
+!.env.template
+!.env.*.template
